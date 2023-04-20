@@ -7,15 +7,14 @@
 <body>
     <header>
         <nav>
-            <div id="logo">
-                <img src="photos/logo.png" alt="Logo">
-            </div>
+            <img src="photos/logo.png" alt="Logo">
+            <a href="#logo">Chicken Invaders</a>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#register">Register</a></li>
-                <li><a href="#login">Log In</a></li>
-                <li><a href="#gamerules">Game Rules</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#home" class="nav-link" data-target="home-section">Home</a></li>
+                <li><a href="#register" class="nav-link" data-target="register-section">Register</a></li>
+                <li><a href="#login" class="nav-link" data-target="login-section">Log In</a></li>
+                <li><a href="#gamerules" class="nav-link" data-target="gamerules-section">Game Rules</a></li>
+                <li><a href="#about" class="nav-link" data-target="about-section">About</a></li>
             </ul>
         </nav>
     </header>
@@ -23,6 +22,27 @@
     <main>
         <div id="content">
             <!-- Content will be dynamically loaded here -->
+            <section id="home-section" class="content-section">
+                <img src="photos/logo.png" alt="Logo">
+                <h1>Welcome to the lamest Chicken Invaders game in the World!</h1>
+                <p>made by: Gil Michalovich</p>
+            </section>
+            <section id="register-section" class="content-section">
+                <h1>Register</h1>
+                <p>This is the registration page.</p>
+            </section>
+            <section id="login-section" class="content-section">
+                <h1>Log In</h1>
+                <p>This is the login page.</p>
+            </section>
+            <section id="gamerules-section" class="content-section">
+                <h1>Game Rules</h1>
+                <p>These are the game rules.</p>
+            </section>
+            <section id="about-section" class="content-section">
+                <h1>About</h1>
+                <p>About the Chicken Invaders game.</p>
+            </section>
         </div>
     </main>
 

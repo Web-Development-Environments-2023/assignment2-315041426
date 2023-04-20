@@ -2,12 +2,24 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color:green;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
+}
+nav{
+    align-items:center;
+    display:flex;
+    justify-content:center;
+}
+nav img{
+    height:50px;
+    width:auto;
+    align-self:center;
+    justify-self:left;
 }
 
 nav ul {
@@ -15,11 +27,14 @@ nav ul {
     padding: 0;
     list-style: none;
     text-align: center;
+    justify-self:center;
+    align-self:center;
 }
 
     nav ul li {
         display: inline-block;
         margin-right: 20px;
+        padding:0 70px;
     }
 
         nav ul li:last-child {
@@ -39,11 +54,17 @@ main {
 }
 
 #content {
-    max-width: 800px;
     padding: 20px;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.content-section {
+    display: none;
+}
+
+    .content-section.active {
+        display: block;
+    }
+
 
 footer {
     background-color: #333;

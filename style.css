@@ -21,6 +21,12 @@ nav img{
     align-self:center;
     justify-self:left;
 }
+#logo-img {
+    height: 50px;
+    width: auto;
+    align-self: center;
+    justify-self: left;
+}
 
 nav ul {
     margin: 0;
@@ -64,7 +70,10 @@ main {
     .content-section.active {
         display: block;
     }
-
+    #logo-header{
+        display:flex;
+        justify-content:left;
+    }
 
 footer {
     background-color: #333;

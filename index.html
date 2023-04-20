@@ -7,7 +7,7 @@
 <body>
     <header>
         <nav>
-            <img src="photos/logo.png" alt="Logo">
+            <img src="photos/logo.png" alt="Logo" id="logo-img">
             <a href="#logo">Chicken Invaders</a>
             <ul>
                 <li><a href="#home" class="nav-link" data-target="home-section">Home</a></li>
@@ -23,9 +23,17 @@
         <div id="content">
             <!-- Content will be dynamically loaded here -->
             <section id="home-section" class="content-section">
-                <img src="photos/logo.png" alt="Logo">
-                <h1>Welcome to the lamest Chicken Invaders game in the World!</h1>
-                <p>made by: Gil Michalovich</p>
+                <div id="logo-header">
+                    <img src="photos/logo.png" alt="Logo" id="logo-img">
+                    <h2 style="display:block;">Welcome to the lamest Chicken Invaders game in the World!</h2>
+                </div>
+                <br />
+                <div id="home-buttons">
+                    <a href="#login" class="home-button nav-link" data-target="login-section">Login</a>
+                    <a href="#register" class="home-button nav-link" data-target="register-section">Register</a>
+                    <a href="#about" class="home-button nav-link" data-target="about-section">About</a>
+                </div>
+                <p style="display:inline-block;">made by: Gil Michalovich</p>
             </section>
             <section id="register-section" class="content-section">
                 <h1>Register</h1>
@@ -52,5 +60,6 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></body>
 </html>

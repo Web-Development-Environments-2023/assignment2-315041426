@@ -19,6 +19,7 @@ for (let i = 0; i < navLinks.length; i++) {
 
 /******************************************  Register Form Validation *********************************/
 
+const usersDict = {};
                                     //check if password meets the requirement // 
 
 const passwordInput = document.getElementById("password");
@@ -117,6 +118,13 @@ function checkRegister() {
     }
 
     // Submit the form if all required fields are filled
-    document.getElementById('regform').submit();
+    usersDict[document.getElementById("username").value] = passwordInput.value
+    const login_section = document.getElementById("login-section");
+
+    for (let j = 0; j < contentSections.length; j++) {
+        contentSections[j].classList.remove('active');
+    }
+    login_section.classList.add('active')
 }
+
 

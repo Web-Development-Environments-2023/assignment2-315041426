@@ -37,46 +37,57 @@
             </section>
             <section id="register-section" class="content-section">
                 <h1>Register</h1>
-                <form id="formR" class="formR">
+                <form id="regform" class="formR">
 
                     <div class="user-box">
-                        <input type="text" id="username" name="" required />
                         <label for="username">Username</label>
+                        <input type="text" id="username" name="" required />
+
                     </div>
 
 
                     <div class="user-box">
-                        <input type="mail" id="email" name="" required />
                         <label for="email">Email</label>
+                        <input type="mail" id="email" name="" required />
+                        <br />
+                        <span id="email-validation"></span>
                     </div>
 
 
                     <div class="user-box">
-                        <input type="password" id="password" name="" required />
                         <label for="password">Password</label>
-                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+                        <input type="password" id="password" name="password" required>
+                        <span id="password_validation"></span>
+                        <br />
                     </div>
 
                     <div class="user-box">
-                        <input type="password" id="password2" name="password2" required />
                         <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" name="password2" required>
+                        <span id="passwords-match"></span>
                     </div>
 
 
                     <div class="user-box">
-                        <input type="text" id="firstname" name="" required />
                         <label for="firstname">First Name</label>
+                        <input type="text" id="firstname"name="firstname" required/>
                     </div>
 
                     <div class="user-box">
-                        <input type="text" id="lastname" name="" required />
                         <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" required/>
+                        <span id="name-validation"></span>
                     </div>
 
                     <div class="user-box">
-                        <input type="date" id="bday" name="" required />
                         <label for="bday">Birth Date</label>
+                        <input type="date" id="bday" name="" required />
                     </div>
+                    <a href="#" onclick=" return checkRegister();" id="regsubmit">
+                        Submit
+                    </a>
+                </form>
+
             </section>
             <section id="login-section" class="content-section">
                 <h1>Log In</h1>
@@ -100,5 +111,6 @@
 
     <script src="script.js"></script>
     <script src="jquery-1.10.2.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</body>
 </html>

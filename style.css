@@ -43,11 +43,11 @@ nav ul {
         padding:0 70px;
     }
 
-        nav ul li:last-child {
-            margin-right: 0;
-        }
+    nav ul li:last-child {
+        margin-right: 0;
+    }
 
-        nav ul li a {
+   nav ul li a {
             color: #fff;
             text-decoration: none;
         }

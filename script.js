@@ -145,10 +145,47 @@ function checkLogin() {
     }
     else {
         document.getElementById("login-section").classList.remove('active')
-        document.getElementById("game-section").classList.add('active')
+        document.getElementById("config-section").classList.add('active')
 
 
     }
 }
+
+// Get the form and input elements
+const configForm = document.getElementById("config-form");
+const fireKeyInput = document.querySelector('#fire-key');
+const bindKeyBtn = document.querySelector('#bind-key-btn');
+
+// Handle the bind key button click
+bindKeyBtn.addEventListener('click', () => {
+    // Change the fire key input to "Press any key"
+    fireKeyInput.value = 'Press any key';
+
+    // Listen for the next key press and set it as the fire key
+    document.addEventListener('keydown', (event) => {
+        const keyCode = event.keyCode;
+        const keyName = event.key;
+
+        // Update the fire key input to show the selected key
+        fireKeyInput.value = keyName;
+
+        // Prevent the key from triggering other actions on the page
+        event.preventDefault();
+
+        // Remove the event listener for the key press
+        document.removeEventListener('keydown', arguments.callee);
+    });
+});
+
+// Handle the form submission
+configForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Get the selected fire key
+    const fireKey = fireKeyInput.value;
+    alert('you selected ' + fireKey);
+    
+});
+
 
 

@@ -83,7 +83,7 @@
                         <label for="bday">Birth Date</label>
                         <input type="date" id="bday" name="" required />
                     </div>
-                    <a href="#" onclick=" return checkRegister();" id="regsubmit">
+                     <a href="#" onclick=" return checkRegister();" id="regsubmit">
                         Submit
                     </a>
                 </form>
@@ -111,9 +111,15 @@
                 <h1>About</h1>
                 <p>About the Chicken Invaders game.</p>
             </section>  
-            <section id="game-section" class="content-section">
-                <h1>The Game Section</h1>
-                <p>This is the game page.</p>
+            <section id="config-section" class="content-section">
+                <h1>Game Configuration</h1>
+                <form id="config-form">
+                    <label for="fire-key">Fire Key:</label>
+                    <input type="text" id="fire-key" name="fire-key" readonly>
+                    <button type="button" id="bind-key-btn">Bind Key</button>
+                    <br>
+                    <button type="submit">Save</button>
+                </form>
             </section>
         </div>
     </main>

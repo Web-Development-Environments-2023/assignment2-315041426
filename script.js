@@ -104,7 +104,8 @@ function validateEmail(event) {
 }
 
 function checkRegister() {
-    var inputs = document.querySelectorAll('input[required], select[required], textarea[required]');
+    const regSection = document.getElementById("register-section");
+    var inputs = regSection.querySelectorAll('input');
 
     for (var i = 0; i < inputs.length; i++) {
         if (!inputs[i].value) {
@@ -125,6 +126,29 @@ function checkRegister() {
         contentSections[j].classList.remove('active');
     }
     login_section.classList.add('active')
+}
+
+function checkLogin() {
+    const usernameLoginInput = document.getElementById("usernameLogin").value
+    const passwordLoginInput = document.getElementById("passwordLogin").value
+    if (usernameLoginInput === "") {
+        alert('You didnt fill out username');
+        return false;
+    }
+    else if (passwordLoginInput === "") {
+        alert('You didnt fill out password');
+        return false;
+    }
+    else if (!(usernameLoginInput in usersDict) || (usersDict[usernameLoginInput] != passwordLoginInput)) {
+        alert('username or password are incorrect!')
+        return false;
+    }
+    else {
+        document.getElementById("login-section").classList.remove('active')
+        document.getElementById("game-section").classList.add('active')
+
+
+    }
 }
 
 
